@@ -1,0 +1,27 @@
+{
+  "name": "eBUS Adapter Shield",
+  "version": "20241027",
+  "funding_url": "https://github.com/sponsors/john30",
+  "new_install_prompt_erase": true,
+  "new_install_improv_wait_time": 15,
+  "builds": [
+    {
+      "chipFamily": "ESP32-C3",
+      "parts": [
+        {"path": "bootloader.bin", "offset": 0},
+        {"path": "partition_ota.bin", "offset": 32768},
+        {"path": "20241027.bin", "offset": 65536},
+        {"path": "ota_data_initial.bin", "offset": 2097152}
+      ]
+    },
+    {
+      "chipFamily": "ESP32-C6",
+      "parts": [
+        {"path": "bootloader_c6.bin", "offset": 0},
+        {"path": "partition_ota.bin", "offset": 32768},
+        {"path": "20241027_c6.bin", "offset": 65536},
+        {"path": "ota_data_initial.bin", "offset": 2097152}
+      ]
+    }
+  ]
+}
