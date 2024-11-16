@@ -1,3 +1,100 @@
+### Version 2024-10-27, reported as `1[4a1b]`
+* features:
+  * add retrieval of credentials from WPS with push button mode (PBC) when device is blank
+  * add mDNS device string to the UI
+  * add Wi-Fi 6 only protocol selection on C6
+* fixes:
+  * arbitrary reboots issued by RGB LED driver
+  * mDNS service list in case of late station connection
+* other:
+  * updated ESP-IDF to [v5.3.1 release on commit a0f798c](https://github.com/espressif/esp-idf/commit/a0f798cfc4bbd624aab52b2c194d219e242d80c1)
+
+
+### Version 2024-10-08, reported as `1[4a08]`
+* features:
+  * add estimate bus voltage report to enhanced protocol
+  * add average of several samples for adc command
+* other:
+  * updated ESP-IDF to [v5.3.1 release on commit 707d097](https://github.com/espressif/esp-idf/commit/707d097b01756687cca18be855a2675d150247ae) (including the massively changed USB serial driver)
+
+
+### Version 2024-08-25, reported as `1[4819]`
+* features:
+  * better responsive web UI
+  * add mDNS for auto discovery
+* fixes:
+  * HW ID determination for C6
+* other:
+  * updated ESP-IDF to [commit 0bbd728](https://github.com/espressif/esp-idf/commit/0bbd72819602b4b8cf786a8833d0ee9c922268bf) (without the massively changed USB serial driver though)
+
+
+### Version 2024-08-09, reported as `1[4809]`
+* features:
+  * first version also released for ESP32-C6 supporting the [C6 Edition](https://adapter.ebusd.eu/v5-c6/index.en.html)
+* other:
+  * updated ESP-IDF to released [v5.3 version](https://github.com/espressif/esp-idf/tree/release/v5.3) on [commit dc7fb34](https://github.com/espressif/esp-idf/commit/dc7fb34fca8d4a7b7232772458931072f44c3264) (without the massively changed USB serial driver though)
+
+
+### Version 2024-06-15, reported as `1[460f]`
+* features:
+  * add logging of last data exchanged to/from eBUS/host on error log and in verbose mode
+* fixes:
+  * enable another WiFi optimization setting of ESP-IDF to improve TCP transfer
+  * remove one case reported as host protocol error, that is actually in responsibility of ebusd and not the adapter
+* other:
+  * updated ESP-IDF to current git ([release/v5.3 branch](https://github.com/espressif/esp-idf/tree/release/v5.3)) on [commit ae87691](https://github.com/espressif/esp-idf/commit/ae876915ec7aa0f96edc826e413baa45ac3c2a64)
+
+
+### Version 2024-05-26, reported as `1[451a]`
+* features:
+  * first version also released for [Wemos C3 mini](wemos.en) for use on older adapters
+  * improved workaround for skipping too lengthy HTTP request headers (for weird cloudflare tunneling)
+  * show initial network connection as green fade off
+  * smaller web UI improvements
+  * use dedicated reset pin for USR-ES1/W5500 Ethernet
+* fixes:
+  * missed reboot from web UI when skipping startup procedure
+* other:
+  * updated ESP-IDF to current git ([release/v5.3 branch](https://github.com/espressif/esp-idf/tree/release/v5.3))
+
+
+### Version 2024-05-18, reported as `1[4512]`
+* features:
+  * nicer web UI, better responsive layout for the pins section
+  * skip too lengthy HTTP request headers (workaround for weird cloudflare tunneling)
+* fixes:
+  * correct topic extraction on received MQTT messages
+
+
+### Version 2024-05-05, reported as `1[4505]`
+* features:
+  * improve timers and async handling of timed tasks (MQTT, LEDs)
+  * force full Wi-Fi calibration
+  * add wifi power+protocol+channel selection
+  * more verbose "query" and "ip" command output
+  * remove annoying vfs warning
+  * add workaround for DNS via DHCP
+  * increase tolerated HTTP header length
+  * disable queueing TCP out-of-order packets
+  * nicer web UI, better responsive layout
+* other:
+  * updated ESP-IDF to current git ([release/v5.3 branch](https://github.com/espressif/esp-idf/tree/release/v5.3))
+
+
+### Version 2024-04-20, reported as `1[4414]`
+* features:
+  * add ps command
+* other:
+  * switched ESP-IDF to [release/v5.3 branch](https://github.com/espressif/esp-idf/tree/release/v5.3) and updated to latest
+
+
+### Version 2024-04-15, reported as `1[440f]`
+* features:
+  * MQTT support with status info like version, uptime, eBUS signal, temperature, AP RSSI
+  * configurable HTTPS certificate
+* other:
+  * updated ESP-IDF to current git
+
 
 ### Version 2024-03-30, reported as `1[431e]`
 * fixes:
@@ -132,5 +229,3 @@
   * reading BMP180, BMP180, BME280 (REPL only)
   * control of LEDs and LED strip (REPL only)
   * optional SSD1306 for status display (REPL only)
-
-
